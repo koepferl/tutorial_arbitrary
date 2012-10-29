@@ -7,9 +7,9 @@ from hyperion.dust import SphericalDust
 # Model
 m = Model()
 dist = 20000 * au
-x = np.linespace(-dist, dist, 11)
-y = np.linespace(-dist, dist, 11)
-z = np.linespace(-dist, dist, 11)
+x = np.linspace(-dist, dist, 11)
+y = np.linspace(-dist, dist, 11)
+z = np.linspace(-dist, dist, 11)
 m.set_cartesian_grid(x,y,z)
 
 # Dust
