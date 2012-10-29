@@ -29,7 +29,7 @@ sourceB = m.add_spherical_source()
 sourceB.luminosity = 0.5 * lsun
 sourceB.radius = 0.865 * rsun
 sourceB.temperature = 5260.
-sourceB.position = (-11.2 * dist,0., 0.)
+sourceB.position = (-11.2 * au,0., 0.)
 
 # Proxima centauri
 sourceP = m.add_spherical_source()
@@ -67,4 +67,4 @@ m.set_sample_sources_evenly(True)
 
 # Write out and run input file
 m.write('input.rtin')
-m.run('input.rtin', mpi=true, n_processes = 2)
+m.run('input.rtin', mpi=True, n_processes = 2)
