@@ -18,21 +18,21 @@ d.set_sublimation_temperature('fast', temperature=1600.)
 m.add_density_grid(np.ones((10,10,10)),'kmh.hdf5')
 
 # Alpha centauri
-sourceA = m.add_point_source()
+sourceA = m.add_spherical_source()
 sourceA.luminosity = 1.519 * lsun
 sourceA.radius = 1.227 * rsun
 sourceA.temperature = 5790.
 sourceA.position = (0.,0., 0.)
 
 # Beta centauri
-sourceB = m.add_point_source()
+sourceB = m.add_spherical_source()
 sourceB.luminosity = 0.5 * lsun
 sourceB.radius = 0.865 * rsun
 sourceB.temperature = 5260.
 sourceB.position = (-11.2 * dist,0., 0.)
 
 # Proxima centauri
-sourceP = m.add_point_source()
+sourceP = m.add_spherical_source()
 sourceP.luminosity = 0.0017 * lsun
 sourceA.radius = 0.141 * rsun
 sourceP.temperature = 3042.
