@@ -1,3 +1,4 @@
+import numpy as np
 from hyperion.model import Model
 from hyperion.util.constants import au, lsun, rsun
 from hyperion.dust import SphericalDust
