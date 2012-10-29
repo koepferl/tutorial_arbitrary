@@ -67,4 +67,4 @@ m.set_sample_sources_evenly(True)
 
 # Write out and run input.rtin file
 m.write('input.rtin')
-m.run('input.rtin', mpi=True, n_processes = 2)
+m.run('input.out', mpi=True, n_processes = 2)
