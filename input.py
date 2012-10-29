@@ -34,7 +34,7 @@ sourceB.position = (-11.2 * dist,0., 0.)
 # Proxima centauri
 sourceP = m.add_spherical_source()
 sourceP.luminosity = 0.0017 * lsun
-sourceA.radius = 0.141 * rsun
+sourceP.radius = 0.141 * rsun
 sourceP.temperature = 3042.
 sourceP.position = (0., 15000 * dist, 0.)
 
