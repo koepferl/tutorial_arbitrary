@@ -42,7 +42,7 @@ sourceP.position = (0., 0.75 * dist, 0.)
 image = m.add_peeled_images(sed=True, image=False)
 image.set_wavelength_range(250, 0.01, 5000.)
 image.set_viewing_angles(np.linspace(0., 90., 10), np.repeat(20., 10))
-image.set_track_origin('basic')
+image.set_track_origin('detailed')
 
 # Add multi-wavelength image for a single viewing angle
 image = m.add_peeled_images(sed=False, image=True)
@@ -65,6 +65,6 @@ m.set_n_photons(initial=1000000, imaging=1000000,
                 raytracing_sources=1000000, raytracing_dust=1000000)
 m.set_sample_sources_evenly(True)
 
-# Write out and run input file
+# Write out and run input.rtin file
 m.write('input.rtin')
 m.run('input.rtin', mpi=True, n_processes = 2)
