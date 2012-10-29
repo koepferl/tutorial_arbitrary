@@ -22,21 +22,21 @@ sourceA = m.add_spherical_source()
 sourceA.luminosity = 1.519 * lsun
 sourceA.radius = 1.227 * rsun
 sourceA.temperature = 5790.
-sourceA.position = (0.,0., 0.)
+sourceA.position = (0., 0., 0.)
 
 # Beta centauri
 sourceB = m.add_spherical_source()
 sourceB.luminosity = 0.5 * lsun
 sourceB.radius = 0.865 * rsun
 sourceB.temperature = 5260.
-sourceB.position = (-11.2 * au,0., 0.)
+sourceB.position = (-11.2 * au, 0., 0.)
 
 # Proxima centauri
 sourceP = m.add_spherical_source()
 sourceP.luminosity = 0.0017 * lsun
 sourceP.radius = 0.141 * rsun
 sourceP.temperature = 3042.
-sourceP.position = (0., 15000 * dist, 0.)
+sourceP.position = (0., 0.75 * dist, 0.)
 
 # Add 10 SEDs for different viewing angles
 image = m.add_peeled_images(sed=True, image=False)
