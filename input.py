@@ -15,7 +15,7 @@ m.set_cartesian_grid(x,y,z)
 # Dust
 d = SphericalDust('kmh.hdf5')
 d.set_sublimation_temperature('fast', temperature=1600.)
-m.add_density_grid(np.ones((10,10,10)),'kmh.hdf5')
+m.add_density_grid(np.ones((10,10,10)) * 1.e-16,'kmh.hdf5')
 
 # Alpha centauri
 sourceA = m.add_spherical_source()
