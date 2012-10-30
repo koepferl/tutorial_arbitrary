@@ -64,6 +64,8 @@ m.set_raytracing(True)
 m.set_n_photons(initial=1000000, imaging=1000000,
                 raytracing_sources=1000000, raytracing_dust=1000000)
 m.set_sample_sources_evenly(True)
+m.set_mrw(True, gamma=2.)
+m.set_pda(True)
 
 # Write out and run input.rtin file
 m.write('input.rtin')
