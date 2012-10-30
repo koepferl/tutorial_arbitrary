@@ -15,7 +15,7 @@ m.set_cartesian_grid(x,y,z)
 # Dust
 d = SphericalDust('kmh.hdf5')
 d.set_sublimation_temperature('fast', temperature=1600.)
-m.add_density_grid(np.ones((100,100,100)) * 1.e-16,'kmh.hdf5')
+m.add_density_grid(np.ones((100,100,100)) * 1.e-18,'kmh.hdf5')
 
 # Alpha centauri
 sourceA = m.add_spherical_source()
@@ -65,7 +65,7 @@ m.set_n_photons(initial=1000000, imaging=1000000,
                 raytracing_sources=1000000, raytracing_dust=1000000)
 m.set_sample_sources_evenly(True)
 m.set_mrw(True, gamma=2.)
-m.set_pda(True)
+#m.set_pda(True)
 
 # Write out and run input.rtin file
 m.write('input.rtin')
