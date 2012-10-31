@@ -4,7 +4,7 @@ import pyfits
 from hyperion.model import ModelOutput
 from hyperion.util.constants import pc
 
-m = ModelOutput('input.out')
+m = ModelOutput('input_lessdense.rtout')
 wav, nufnu = m.get_image(group=1, inclination=0, distance=300 * pc)
 
 # Initialize WCS information
