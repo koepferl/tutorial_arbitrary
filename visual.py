@@ -5,7 +5,7 @@ from hyperion.model import ModelOutput
 from hyperion.util.constants import pc, au
 
 # Read in the model
-m = ModelOutput('input_withoutproxima.rtout')
+m = ModelOutput('input_lessdense.rtout')
 
 # Extract the quantities
 g = m.get_quantities()
@@ -18,8 +18,8 @@ X, Y = np.meshgrid(xw, yw)
 
 # Calculate the density-weighted temperature
 weighted_temperature =  np.sum(g['temperature'][0].array \
-                               * g['density'][0].array, axis=2)\
-                        / np.sum(g['density'][0].array, axis=2)
+                               * g['density'][0].array, axis=0)\
+                        / np.sum(g['density'][0].array, axis=0)
 
 # Make the plot
 fig = plt.figure()
@@ -31,7 +31,7 @@ ax.set_xlabel('x (au)')
 ax.set_ylabel('y (au)')
 cb = fig.colorbar(c)
 cb.set_label('Temperature (K)')
-fig.savefig('weighted_temperature_cartesian_withoutproxima.png', bbox_inches='tight')
+fig.savefig('weighted_temperature_cartesian_lessdense.pdf', bbox_inches='tight')
 
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)
@@ -42,4 +42,4 @@ ax.set_xlabel('x (au)')
 ax.set_ylabel('y (au)')
 cb = fig.colorbar(c)
 cb.set_label('Temperature (K)')
-fig.savefig('sliced_temperature_cartesian_withoutproxima.png', bbox_inches='tight')
+fig.savefig('sliced_temperature_cartesian_lessdense.png', bbox_inches='tight')
