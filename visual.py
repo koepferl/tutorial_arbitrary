@@ -31,7 +31,7 @@ ax.set_xlabel('x (au)')
 ax.set_ylabel('y (au)')
 cb = fig.colorbar(c)
 cb.set_label('Temperature (K)')
-fig.savefig('weighted_temperature_cartesian_withoutproxima.pdf', bbox_inches='tight')
+fig.savefig('weighted_temperature_cartesian_withoutproxima.png', bbox_inches='tight')
 
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)

@@ -14,7 +14,7 @@ if not os.path.exists('frames'):
     os.mkdir('frames')
 
 # Open model
-m = ModelOutput('tutorial_model.rtout')
+m = ModelOutput('input_lessdense.rtout')
 
 # Read image from model
 wav, nufnu = m.get_image(group=2, distance=300 * pc)
