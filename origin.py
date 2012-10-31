@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from hyperion.model import ModelOutput
 from hyperion.util.constants import pc
 
-m = ModelOutput('input_lessdense.rtout')
+m = ModelOutput('input_withoutproxima.rtout')
 
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
@@ -34,4 +34,4 @@ ax.set_xlabel(r'$\lambda$ [$\mu$m]')
 ax.set_ylabel(r'$\lambda F_\lambda$ [ergs/s/cm$^2$]')
 ax.set_xlim(0.1, 10000.)
 ax.set_ylim(1.e-40, 2.e-1)
-fig.savefig('sed_origin_lessdense.png')
+fig.savefig('sed_origin_withoutproxima.png')

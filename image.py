@@ -4,7 +4,7 @@ import pyfits
 from hyperion.model import ModelOutput
 from hyperion.util.constants import pc
 
-m = ModelOutput('input_lessdense.rtout')
+m = ModelOutput('input_withoutproxima.rtout')
 wav, nufnu = m.get_image(group=1, inclination=0, distance=300 * pc)
 
 # Initialize WCS information
@@ -27,5 +27,5 @@ wcs.wcs.ctype = ['GLON-CAR', 'GLAT-CAR']
 header = wcs.to_header()
 
 # Write out to a file including the new header
-pyfits.writeto('image_slice_wcs.fits', nufnu[:, :, 0], header,
+pyfits.writeto('image_slice_wcs_withoutproxima.fits', nufnu[:, :, 0], header,
                clobber=True)
