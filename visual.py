@@ -5,7 +5,7 @@ from hyperion.model import ModelOutput
 from hyperion.util.constants import pc, au
 
 # Read in the model
-m = ModelOutput('input.rtout')
+m = ModelOutput('input_lessdense.rtout')
 
 # Extract the quantities
 g = m.get_quantities()
@@ -31,7 +31,7 @@ ax.set_xlabel('x (au)')
 ax.set_ylabel('y (au)')
 cb = fig.colorbar(c)
 cb.set_label('Temperature (K)')
-fig.savefig('weighted_temperature_cartesiandiff.png', bbox_inches='tight')
+fig.savefig('weighted_temperature_cartesian_lessdense.png', bbox_inches='tight')
 
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)
@@ -42,4 +42,4 @@ ax.set_xlabel('x (au)')
 ax.set_ylabel('y (au)')
 cb = fig.colorbar(c)
 cb.set_label('Temperature (K)')
-fig.savefig('sliced_temperature_cartesiandiff.png', bbox_inches='tight')
+fig.savefig('sliced_temperature_cartesian_lessdense.png', bbox_inches='tight')
